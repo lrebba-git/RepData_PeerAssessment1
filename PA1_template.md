@@ -105,14 +105,14 @@ abline(v = median(steps_sum$steps), lty = 2, lwd = 2, col = "black")
 legend(x = "topright", c("Mean", "Median"), col = c("red", "black"),       lty = c(1, 2), lwd = c(2, 2))
 ```
 
-![plot of chunk total step per day histogram](figure/total step per day histogram-1.png)
+![plot of chunk total step per day histogram](instructions_fig/totalStepsPerDayWithMeanMedian_Hist.png)
 
 ```r
 library(ggplot2)
 ggplot(steps_sum, aes(steps)) + geom_histogram(bins = 10)
 ```
 
-![plot of chunk ggplot histogram](figure/ggplot histogram-1.png)
+![plot of chunk ggplot histogram](instructions_fig/Hist_StepsSum.png)
 
 ```r
 library(lubridate)
@@ -140,7 +140,7 @@ ggplot(steps_sum, aes(date, steps)) + geom_line() +
         ylab("Total number of steps")
 ```
 
-![plot of chunk total steps trend](figure/total steps trend-1.png)
+![plot of chunk total steps trend](instructions_fig/TotalStepsTrend.png)
 
 ## What is the average daily activity pattern?
 
@@ -166,7 +166,7 @@ plot(stepsmeaninterval$interval, stepsmeaninterval$steps, ty = "l",
      steps taken over all days vs \n time interval")
 ```
 
-![plot of chunk time series plot](figure/time series plot-1.png)
+![plot of chunk time series plot](instructions_fig/AverageDailyActivityPattern.png)
 
 
 ```r
@@ -239,7 +239,7 @@ abline(v = median(steps_sum$steps), lty = 2, lwd = 2, col = "black")
 legend(x = "topright", c("Mean", "Median"), col = c("red", "black"), lty = c(2, 1), lwd = c(2, 2))
 ```
 
-![plot of chunk total step per day histogram2](figure/total step per day histogram2-1.png)
+![plot of chunk total step per day histogram2](instructions_fig/totalStepsPerDayWithImputedMissingValues_Hist.png)
 
 
 ```r
@@ -334,7 +334,7 @@ library(ggplot2)
 ggplot(stepsmean_interval, aes(interval, steps)) + geom_line() + facet_grid(day ~ .) 
 ```
 
-![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
+![plot of chunk unnamed-chunk-1](instructions_fig/StepsMeanInterval.png)
 
 
 ```r
